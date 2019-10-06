@@ -23,7 +23,12 @@
 
     <script>
         Vue.component('hello', {
-            template:`<p class="hellostyle"> Hello Pengfei</p>`,
+            template:`<p class="hellostyle"> Hello Pengfei {{message}}</p>`,
+            data() {
+                return {
+                    message:'Tang'
+                }
+            },
         });
 
         var app = new Vue({
