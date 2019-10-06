@@ -18,15 +18,23 @@
     <h1>Vue.js</h1>
 
     <div id="app">
-        <hello/>
+        <div>
+            <hello username="Pengfei Tang"></hello>
+        </div>
+        <div>
+            <hello username="Snow White"></hello>
+        </div>
     </div>
 
     <script>
         Vue.component('hello', {
-            template:`<p class="hellostyle"> Hello Pengfei {{message}}</p>`,
+            template:`<p class="hellostyle"> Hello {{message}} : {{username}}</p>`,
+            props:[
+                'username'
+            ],
             data() {
                 return {
-                    message:'Tang'
+                    message:'World'
                 }
             },
         });
